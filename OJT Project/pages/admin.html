@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPage</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-welcome"></div>
+        <ul class="header-interaction">
+            <li class="interaction-login-logout" id="logout">
+                <a href="./adminRegister.html">Đăng ký</a>
+                <a href="./adminLogin.html">Đăng nhập</a>
+            </li>
+            <li id="render-after-login">
+                
+            </li>
+        </ul>
+    </header>
+    <div class="admin-contents-container">
+        <table class="admin-navbar-direction">
+            <tr class="admin-navbar-direction-link">
+                <td><a href="">Admin Menu</a></td>
+            </tr>
+            <tr class="admin-navbar-direction-link">
+                <td><a href="">Cấu hình</a></td>
+            </tr>
+            <tr class="admin-navbar-direction-link">
+                <td><a href="" onclick="openUserList(event)">Người dùng</a></td>
+            </tr>
+            <tr class="admin-navbar-direction-link">
+                <td><a href="" onclick="openProductList(event)">Sản phẩm</a></td>
+            </tr>
+            <tr class="admin-navbar-direction-link">
+                <td><a href="" onclick="openOrderList(event)">Đơn hàng</a></td>
+            </tr>
+        </table>
+        <table class="admin-content-products">
+            <tr class="products-list-title" >
+                <td class="products-title">Danh sách sản phẩm</td>
+            </tr>
+            <tr class="products-list-add-btn">
+                <td class="add-btn-container">
+                    <button class="add-button" onclick="openAddProduct(event)">Thêm sản phẩm</button>
+                </td>
+            </tr>
+            <tr class="products-searchbar-container">
+                <td>
+                    <label for="search">Tìm kiếm sản phẩm</label>
+                    <input type="text" id="search">
+                    <button id="searchBtn" onclick="findProduct()">Search</button>
+                </td>
+            </tr>
+            <tr class="products-add-form">
+                <td class="add-form-container ">
+                    <form onsubmit="addProduct(event)" action="">
+                        <label for="productName">Tên sản phẩm</label>
+                        <input type="text" name="productName" id="productName" placeholder="Nhập tên sản phẩm"><br>
+                        <label for="productImage">Ảnh</label>
+                        <input type="text" name="productImage" id="productImage" placeholder="Nhập vào đường dẫn của hình ảnh"><br>
+                        <label for="productPrice">Giá</label>
+                        <input type="text" name="productPrice" id="productPrice" placeholder="Nhập vào giá sản phẩm (VD: 10.000)" ><br>
+                        <label for="productQuantity">Số lượng sản phẩm</label>
+                        <input type="number" name="productQuantity" id="productQuantity" placeholder="Nhập vào số lượng sản phẩm" min="1"><br>
+                        <button id="addProductBtn" onclick="addProduct(event)">Thêm sản phẩm</button>
+                    </form>
+                </td>
+            </tr>
+            <tr class="products-contents-container">
+                <td>
+                    <table class="products-contents-table">
+                        <thead class="products-contents-table-header">
+                            <td class="header-item">ID</td>
+                            <td class="header-item">Ảnh</td>
+                            <td class="header-item">Tên sản phẩm</td>
+                            <td class="header-item">Số lượng</td>
+                            <td class="header-item">Ngày cập nhật</td>
+                            <td class="header-item">Sửa</td>
+                            <td class="header-item">Xóa</td>
+                        </thead>
+                        <tbody class="products-contents-table-body">
+                            
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="admin-content-users">
+            <tr class="users-list-title" >
+                <td class="users-title">Danh sách người dùng</td>
+            </tr>
+            <tr class="users-searchbar-container">
+                <td>
+                    <label for="searchUser">Tìm kiếm người dùng</label>
+                    <input type="text" id="searchUser">
+                    <button id="searchUserBtn" onclick="findUser()">Search</button>
+                </td>
+            </tr>
+            <tr class="users-edit-form">
+                <td class="edit-form-container">
+                    <form action="">
+                        <label for="userName">Tên người dùng</label>
+                        <input type="text" name="userName" id="userName" placeholder="Nhập tên người dùng"><br>
+                        <label for="userEmail">Email</label>
+                        <input type="text" name="userEmail" id="userEmail" placeholder="Nhập vào email người dùng"><br>
+                        <label for="userPassword">Mật khẩu</label>
+                        <input type="text" name="userPassword" id="userPassword" placeholder="Nhập vào mật khẩu" ><br>
+                        <button id="editUserBtn">Edit thông tin</button>
+                    </form>
+                </td>
+            </tr>
+            <tr class="users-contents-container">
+                <td>
+                    <table class="users-contents-table">
+                        <thead class="users-contents-table-header">
+                            <td class="user-header-item">ID</td>
+                            <td class="user-header-item">Tên người dùng</td>
+                            <td class="user-header-item">Email</td>
+                            <td class="user-header-item">Mật khẩu</td>
+                            <td class="user-header-item">Ngày tạo</td>
+                            <td class="user-header-item">Sửa</td>
+                            <td class="user-header-item">Xóa</td>
+                            <td class="user-header-item">Trạng thái</td>
+                        </thead>
+                        <tbody class="users-contents-table-body">
+                            
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="admin-content-orders">
+            <tr class="orders-list-title" >
+                <td class="orders-title">Danh sách đơn hàng</td>
+            </tr>
+            <tr class="orders-searchbar-container">
+                <td>
+                    <label for="searchOrder">Tìm kiếm đơn hàng</label>
+                    <input type="text" id="searchOrder">
+                    <button id="searchOrderBtn" onclick="findOrder()">Search</button>
+                </td>
+            </tr>
+            <tr class="orders-contents-container">
+                <td>
+                    <table class="orders-contents-table">
+                        <thead class="orders-contents-table-header">
+                            <td class="order-header-item">ID</td>
+                            <td class="order-header-item">Tên người dùng</td>
+                            <td class="order-header-item">Email</td>
+                            <td class="order-header-item">Mật khẩu</td>
+                            <td class="order-header-item">Ngày tạo</td>
+                            <td class="order-header-item">Sửa</td>
+                            <td class="order-header-item">Xóa</td>
+                            <td class="order-header-item">Trạng thái</td>
+                        </thead>
+                        <tbody class="orders-contents-table-body">
+                            
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>

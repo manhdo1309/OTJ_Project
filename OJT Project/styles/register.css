@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    width: 100vw;
+    height: 84px;
+    line-height: 84px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    gap: 600px;
+}
+
+.header .logo-container{
+    display: flex;
+    gap: 15px;
+    font-size: 150%;
+}
+
+.logo-container .logo{
+    display: flex;
+    gap: 5px;
+    color: #ee4d2d;
+}
+
+.main{
+    width: 100vw;
+    height: 600px;
+    background-color: rgb(238, 77, 45);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main .main-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.main-logo .main-logo-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 350%;
+}
+
+.main-logo-content i{
+    font-size: 400%;
+}
+
+.main-logo .logo-present{
+    font-size: 150%;
+    color: #ffffff;
+}
+
+.main .register-form{
+    height: 482px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.14);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.register-form .form-title{
+    font-size: 150%;
+    margin-bottom: 10px;
+}
+
+.register-form .form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-inputs input{
+    padding-left: 10px;
+    height: 40.8px;
+    border: 1px solid #f1f1f1;
+}
+
+.form-inputs button{
+    height: 40.8px;
+    color: #fff;
+    background-color: #f3826c;
+    box-shadow: 0 1px 1px rgba(0,0,0,.09);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-inputs button:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.register-form .form-links{
+    font-size: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+

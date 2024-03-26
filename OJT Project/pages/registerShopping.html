@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Trang đăng ký 
+        Các trường để đăng ký
+        1. Tên đăng nhập
+        2. email
+        3. password
+        4. confirm password
+        5. cart (dùng để đi mua hàng)
+        các user trong mảng users không được trùng email
+    
+    -->
+    <div class="header">
+        <div class="logo-container">
+            <a href="" class="logo">
+                <div class="logo-image"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="logo-title">Shopmee</div>
+            </a>
+            <div>Đăng ký</div>
+        </div>
+        <a href="" class="help-center" style="color: #ee4d2d;">Bạn cần giúp đỡ?</a>
+    </div>
+    <div class="main">
+        <div class="main-logo">
+            <div class="main-logo-content">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div>Shopmee</div>
+            </div>
+            <div class="logo-present">Nền tảng thương mại điện tử yêu thích ở Việt Nam</div>
+        </div>
+        <form onsubmit="register(event)" class="register-form">
+            <div class="form-title">Đăng ký</div>
+            <div class="form-inputs">
+                <input type="text" autocomplete="name" id="name" placeholder="Tên đăng nhập">
+                <input type="email" autocomplete="email" name="email" id="email" placeholder="Email">
+                <input type="password" name="password" id="password" placeholder="Mật khẩu">
+                <input type="password" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu">
+                <button onclick="register(event)">ĐĂNG KÝ</button>
+            </div>
+            <div class="form-links">
+                <a href="./loginShopping.html">Đã có tài khoản? Đăng nhập ngay</a>
+            </div>
+        </form>
+    </div>
+    <script src="../js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Trang đăng nhập -->
+    <div class="header">
+        <div class="logo-container">
+            <a href="/index.html" class="logo">
+                <div class="logo-image"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="logo-title">Shopmee</div>
+            </a>
+            <div>Đăng nhập</div>
+        </div>
+        <a href="" class="help-center" style="color: #ee4d2d;">Bạn cần giúp đỡ?</a>
+    </div>
+    <div class="main">
+        <div class="main-logo">
+            <div class="main-logo-content">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div>Shopmee</div>
+            </div>
+            <div class="logo-present">Nền tảng thương mại điện tử yêu thích ở Việt Nam</div>
+        </div>
+        <form action="" onsubmit="login(event)" class="login-form">
+            <div class="form-title">Đăng nhập</div>
+            <div class="form-inputs">
+                <input type="text" autocomplete="name" id="name" placeholder="Email/Số điện thoại/Tên đăng nhập">
+                <input type="password" name="password" id="password" placeholder="Mật khẩu">
+                <button onclick="login(event)">ĐĂNG NHẬP</button>
+            </div>
+            <div class="form-links">
+                <a href="">Quên mật khẩu?</a>
+                <a href="./registerShopping.html">Chưa có tài khoản? Đăng ký ngay</a>
+            </div>
+        </form>
+    </div>
+    <script src="../js/login.js"></script>
+    <script src="/index.html"></script>
+</body>
+</html>

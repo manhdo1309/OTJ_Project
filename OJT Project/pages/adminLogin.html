@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles/adminLogin.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="login(event)" class="sign-in-container">
+            <div class="header">
+                <div class="header-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="header-title">Sign in</div>
+            </div>
+            <div class="content">
+                <input type="text" name="email" id="email" placeholder="Email Address *" autocomplete="email" required>
+                <input type="password" name="password" id="password" placeholder="Password *" required>
+                <div class="checkbox">
+                    <input type="checkbox" name="remember" id="remember">
+                    <t>Remember me</t>
+                </div>
+            </div>
+            <div class="footer">
+                <button class="button" onclick="login(event)">SIGN IN</button>
+                <div class="links">
+                    <a href="">Forgot password?</a>
+                    <a href="./adminRegister.html">Don't have an account? Sign up</a>
+                </div>
+            </div>
+            <div class="about">
+                Copyright © <span>Your Website</span> 2024
+            </div>
+        </form>
+    </div>
+    <script src="../js/adminLogin.js"></script>
+</body>
+</html>

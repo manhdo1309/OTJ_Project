@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles/adminRegister.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="signup(event)" class="sign-up-container">
+            <div class="header">
+                <div class="header-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="header-title">Sign up</div>
+            </div>
+            <div class="content">
+                <div class="info">
+                    <input type="text" name="first-name" id="first-name" placeholder="First name *" autocomplete="first" required>
+                    <input type="text" name="last-name" id="last-name" placeholder="Last name *" autocomplete="last" required>
+                </div>
+                <input type="text" name="email" id="email" placeholder="Email Address *" autocomplete="email" required>
+                <input type="password" name="password" id="password" placeholder="Password *" required>
+                <div class="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <t>I want to receive inspiration, marketing promotions and updates via email.</t>
+                </div>
+            </div>
+            <div class="footer">
+                <button class="button" onclick="signup(event)">SIGN UP</button>
+                <div class="links">
+                    <a href="./adminLogin.html">Already have an account? Sign in</a>
+                </div>
+            </div>
+            <div class="about">
+                Copyright © <span>Your Website</span> 2024
+            </div>
+        </form>
+    </div>
+    <script src="../js/adminRegister.js"></script>
+</body>
+</html>

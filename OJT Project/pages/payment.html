@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles/payment.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="navbar-container">
+            <ul class="v-center">
+                <li><a href="">Kênh người bán</a></li>
+                <li>|</li>
+                <li><a href="">Tải ứng dụng</a></li>
+                <li>|</li>
+                <li class="navbar-center-contact">
+                    <div class="navbar-center-contact-icons">
+                        <div>Kết nối</div>
+                        <a href=""><i class="fa-brands fa-facebook" style="font-size: 130%;"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram" style="font-size: 130%;"></i></a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-links">
+                <li class="navbar-link-notification">
+                    <div role="button" class="notification-container">
+                        <a href="" class="notification-container-btn">
+                            <i class="fa-regular fa-bell" style="font-size: larger;"></i>
+                            <span class="notification-text">Thông báo</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar-link-help-center">
+                    <div role="button" class="help-center-container">
+                        <a href="" class="help-center-container-btn">
+                            <i class="fa-regular fa-circle-question" style="font-size: larger;"></i>
+                            <span class="help-center-text">Hỗ trợ</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar-link-language">
+                    <div role="button" class="language-container">
+                        <a href="" class="language-container-btn">
+                            <i class="fa-solid fa-globe" style="font-size: larger;"></i>
+                            <span class="language-text">Tiếng Việt</span>
+                            <i class="fa-solid fa-chevron-down" style="font-size: xx-small;"></i>
+                        </a>
+                    </div>
+                </li>
+                <div class="user-nav">
+                    <a href="#" class="user-logo">
+                        <i class="fa-solid fa-user"></i>
+                        <div id="username-render"></div>
+                    </a>
+                    <div class="user-nav-dropdown">
+                        <div class="dropdown-items-container">
+                            <div class="dropdown-item"><a href="">Tài khoản của tôi</a></div>
+                            <div class="dropdown-item"><a href="">Đơn mua</a></div>
+                            <div class="dropdown-item"><a onclick="logout(event)" href="/index.html">Đăng xuất</a></div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <div class="searchbar-container">
+        <div class="logo-container">
+            <a href="/index.html" class="logo-image">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Shopmee</span>
+            </a>
+            <div class="logo-title">
+                Thanh toán
+            </div>
+        </div>
+    </div>
+    <div class="products-container">
+        <div class="buyer-details-container">
+            <div class="delivery-address-text"><i class="fa-solid fa-location-dot"></i> Địa Chỉ Nhận Hàng</div>
+            <table class="buyer-details">
+                <tr>
+                    <td class="buyer-detail-col1">
+                        <div id="recipient-name">Tên người nhận:</div>
+                    </td>
+                    <td class="buyer-detail-col2">
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Nhập vào số điện thoại" pattern="([\+84|84|0]+(3|5|7|8|9|1[2|6|8|9]))+([0-9]{8})\b/.test(number)">
+                    </td>
+                    <td class="buyer-detail-col3">
+                        <label for="deliveryAddress">Địa chỉ:</label>
+                        <input type="text" name="deliveryAddress" id="deliveryAddress" placeholder="Nhập vào địa chỉ nhận hàng">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        Hình thức thanh toán: 
+                        <input type="radio" name="payment-method" id="">Thanh toán khi nhận Hàng
+                        <input type="radio" name="payment-method" id="">Thanh toán qua thẻ tín dụng/ghi nợ
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table id="product-table">
+            <thead class="table-head">
+                <td style="font-size: 18px;">Sản phẩm</td>
+                <td style="font-size: 14px;color: #bbb;">Đơn giá</td>
+                <td style="font-size: 14px;color: #bbb;">Số lượng</td>
+                <td style="font-size: 14px;color: #bbb;">Thành tiền</td>
+            </thead>
+            <tbody id="product-infos">
+                
+            </tbody> 
+            <tfoot id="product-pay">
+                
+            </tfoot>
+        </table>
+    </div>
+    <div class="footer-container">
+        <div class="policies">
+            <a href="" class="policy-item">CHÍNH SÁCH BẢO MẬT</a>
+            <a href="" class="policy-item">QUY CHẾ HOẠT ĐỘNG</a>
+            <a href="" class="policy-item">CHÍNH SÁCH VẬN CHUYỂN</a>
+            <a href="" class="policy-item">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+        </div>
+        <div class="certificate">
+            <div class="certificate-images">
+                <img src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/42068879376/original/I1_Ie_KJI5cFVJCs4rGOzKB4jNhJbkfWYw.png?1624931762" alt="">
+                <img src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/42068879376/original/I1_Ie_KJI5cFVJCs4rGOzKB4jNhJbkfWYw.png?1624931762" alt="">
+                <img src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/42068879376/original/I1_Ie_KJI5cFVJCs4rGOzKB4jNhJbkfWYw.png?1624931762" alt="">
+            </div>
+            <div>Công ty TNHH Shopmee</div>
+        </div>
+        <div class="web-infos">
+            <div class="info-content">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopmee.vn</div>
+            <div class="info-content">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)</div>
+            <div class="info-content">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</div>
+            <div class="info-content">© 2015 - Bản quyền thuộc về Công ty TNHH Shopmee</div>
+        </div>
+    </div>
+    <script src="../js/payment.js"></script>
+</body>
+</html>

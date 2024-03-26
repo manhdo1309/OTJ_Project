@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-image: url(https://t4.ftcdn.net/jpg/03/01/71/45/360_F_301714581_mbUdLfTGX4Wpo3XOGcsHbDgyZXLRsbEU.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-container{
+    background-color: #fff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    width: 400px;
+    height: fit-content;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.header-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+.header-title{
+    font-size: 140%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content input:first-child{
+    height: 40px;
+    padding-left: 5px;
+    border-color: #dedede
+}
+
+.content input:nth-child(2){
+    height: 40px;
+    padding-left: 5px;
+    border-color: #dedede
+}
+
+.content input:nth-child(3){
+    height: 40px;
+    padding-left: 5px;
+    border-color: #dedede
+}
+
+.content .checkbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer .button{
+    height: 40px;
+    background-color: #1976D2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.footer .links{
+    font-size: 90%;
+    color: #a699d9;
+    display: flex;  
+    justify-content: flex-end;
+}
+.about{
+    text-align: center;
+    color: grey;
+    font-size: 90%;
+    margin-top: 50px;
+}
+
+.about span{
+    text-decoration: underline;
+}
